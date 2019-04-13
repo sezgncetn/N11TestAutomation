@@ -8,27 +8,27 @@ public class N11page extends TestBase {
 
 	Xpaths xpath = new Xpaths();
 
-	public Boolean uyeGirisi() {
+	public Boolean login() {
 
 		waitLoad();
-		waitUntilElementClickable(driver, 5, xpath.n11UyeGirisClassName, "className");
-		getWebElement(driver, xpath.n11UyeGirisClassName, "className").click();
-		waitUntilElementClickable(driver, 5, xpath.n11UyeGirisMailId, "id");
-		sendKeyId(driver, xpath.n11UyeGirisMailId, "n11sezgincetin@gmail.com");
-		sendKeyId(driver, xpath.n11UyeGirisPassId, "sezgin.n11");
-		waitUntilElementClickable(driver, 5, xpath.n11UyeGirisBtnId, "id");
-		getWebElement(driver, xpath.n11UyeGirisBtnId, "id").click();
-		return checkElementIsDisableClassName(driver, xpath.uyevarmiClassName);
+		waitUntilElementClickable(driver, 5, xpath.signInButtonClassName, "className");
+		getWebElement(driver, xpath.signInButtonClassName, "className").click();
+		waitUntilElementClickable(driver, 5, xpath.mailId, "id");
+		sendKeyId(driver, xpath.mailId, "n11sezgincetin@gmail.com");
+		sendKeyId(driver, xpath.passwordId, "sezgin.n11");
+		waitUntilElementClickable(driver, 5, xpath.loginBtnId, "id");
+		getWebElement(driver, xpath.loginBtnId, "id").click();
+		return checkElementIsDisableClassName(driver, xpath.customerCheckClassName);
 	}
 
 	public Boolean searchProduct() {
 
 		String pageNumber = "2";
 		Boolean isRight = false;
-		waitUntilElementClickable(driver, 5, xpath.n11MainSearchTextboxId, "id");
-		getWebElement(driver, xpath.n11MainSearchTextboxId, "id").click();
-		waitUntilElementClickable(driver, 5, xpath.n11MainSearchTextboxId, "id");
-		sendKeyId(driver, xpath.n11MainSearchTextboxId, "Samsung");
+		waitUntilElementClickable(driver, 5, xpath.mainSearchTextboxId, "id");
+		getWebElement(driver, xpath.mainSearchTextboxId, "id").click();
+		waitUntilElementClickable(driver, 5, xpath.mainSearchTextboxId, "id");
+		sendKeyId(driver, xpath.mainSearchTextboxId, "Samsung");
 		waitUntilElementClickable(driver, 5, xpath.searchBtnClassName, "className");
 		getWebElement(driver, xpath.searchBtnClassName, "className").click();
 		if (getWebElement(driver, xpath.searchProductTextClassName, "className").getText().contains("Samsung")) {

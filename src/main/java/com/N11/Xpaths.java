@@ -3,12 +3,12 @@ package com.N11;
 public class Xpaths {
 
 	//LoginXpaths
-	public String n11MainSearchTextboxId = "searchData";
-	public String n11UyeGirisClassName = "btnSignIn";
-	public String n11UyeGirisMailId = "email";
-	public String n11UyeGirisPassId = "password";
-	public String n11UyeGirisBtnId = "loginButton";
-	public String uyevarmiClassName = "menuLink";
+	public String mainSearchTextboxId = "searchData";
+	public String signInButtonClassName = "btnSignIn";
+	public String mailId = "email";
+	public String passwordId = "password";
+	public String loginBtnId = "loginButton";
+	public String customerCheckClassName = "menuLink";
 	
 	//SearchProcuctXpaths
 	public String searchBtnClassName = "searchBtn";

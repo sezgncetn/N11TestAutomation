@@ -12,7 +12,7 @@ public class TestN11 extends TestBase {
 	
 	public void N11ProductSearch () {
 		
-		if (np.uyeGirisi()) {
+		if (np.login()) {
 			
 			if(np.searchProduct()) {
 				
